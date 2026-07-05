@@ -19,6 +19,11 @@
 <style>
 body { margin: 0; background: #F7F3EA; }
 @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+@keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-50% - 16px)); } }
+.marquee-track { display: flex; gap: 32px; animation: marquee 50s linear infinite; width: max-content; }
+.marquee-track:hover { animation-play-state: paused; }
+.review-card { flex-shrink: 0; width: 400px; margin: 0; padding: 32px; background: #FFFDF7; border: 1px solid #E8E0CE; border-radius: 12px; white-space: normal; }
+@media (max-width: 600px) { .review-card { width: 300px; } }
 </style>
 </helmet>
 <div style="background: #F7F3EA; color: #33302A; font-family: Karla, 'Helvetica Neue', Arial, sans-serif">
@@ -88,15 +93,71 @@ body { margin: 0; background: #F7F3EA; }
         <div style="animation-name: fadeUp; animation-duration: 0.7s; animation-timing-function: ease; animation-fill-mode: both; animation-timeline: view(); animation-range: entry 0% entry 40%">
           <p style="font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #AD6B4C; margin: 0 0 12px 0">Ervaringen</p>
           <h2 style="font-family: 'Lora', Georgia, serif; font-weight: 500; font-size: clamp(28px, 3.5vw, 40px); margin: 0 0 36px 0">Wat bezoekers vertellen</h2>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; margin-bottom: 36px">
-            <blockquote style="margin: 0; padding: 28px; background: #FFFDF7; border: 1px solid #E8E0CE; border-radius: 12px">
-              <p style="font-family: 'Lora', Georgia, serif; font-style: italic; font-size: 20px; line-height: 1.6; color: #57503F; margin: 0 0 16px 0">[ Plaats hier een echte review van je Google-profiel ]</p>
-              <footer style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #AD6B4C">— Naam, via Google</footer>
-            </blockquote>
-            <blockquote style="margin: 0; padding: 28px; background: #FFFDF7; border: 1px solid #E8E0CE; border-radius: 12px">
-              <p style="font-family: 'Lora', Georgia, serif; font-style: italic; font-size: 20px; line-height: 1.6; color: #57503F; margin: 0 0 16px 0">[ Plaats hier een echte review van je Google-profiel ]</p>
-              <footer style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #AD6B4C">— Naam, via Google</footer>
-            </blockquote>
+          <div style="overflow: hidden; margin-bottom: 36px; padding-bottom: 8px;">
+            <div class="marquee-track">
+              <!-- Set 1 -->
+              <blockquote class="review-card">
+                <div style="color: #C6866A; margin-bottom: 16px; font-size: 18px; letter-spacing: 2px;">★★★★★</div>
+                <p style="font-family: 'Lora', Georgia, serif; font-style: italic; font-size: 19px; line-height: 1.6; color: #57503F; margin: 0 0 16px 0">"Wat een prachtige ervaring. De massage bracht me direct in een diepe ontspanning. De sfeer was warm en veilig, en er werd echt de tijd genomen om af te stemmen."</p>
+                <footer style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #AD6B4C">— Sarah Stappers, via Google</footer>
+              </blockquote>
+              <blockquote class="review-card">
+                <div style="color: #C6866A; margin-bottom: 16px; font-size: 18px; letter-spacing: 2px;">★★★★★</div>
+                <p style="font-family: 'Lora', Georgia, serif; font-style: italic; font-size: 19px; line-height: 1.6; color: #57503F; margin: 0 0 16px 0">"Zalige fullbody massage mogen ontvangen vandaag. Een echte top ervaring, maar vooral enorm ontspannend! Weinig massagetherapeuten die zo zalig en relaxerend masseren."</p>
+                <footer style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #AD6B4C">— Sparkles and Queens, via Google</footer>
+              </blockquote>
+              <blockquote class="review-card">
+                <div style="color: #C6866A; margin-bottom: 16px; font-size: 18px; letter-spacing: 2px;">★★★★★</div>
+                <p style="font-family: 'Lora', Georgia, serif; font-style: italic; font-size: 19px; line-height: 1.6; color: #57503F; margin: 0 0 16px 0">"Een heel fijne en deugddoende ervaring. Kimberly luistert echt en weet precies de juiste plekjes te vinden die extra aandacht of zorg nodig hebben. Zalig."</p>
+                <footer style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #AD6B4C">— Katleen Van Nauw, via Google</footer>
+              </blockquote>
+              <blockquote class="review-card">
+                <div style="color: #C6866A; margin-bottom: 16px; font-size: 18px; letter-spacing: 2px;">★★★★★</div>
+                <p style="font-family: 'Lora', Georgia, serif; font-style: italic; font-size: 19px; line-height: 1.6; color: #57503F; margin: 0 0 16px 0">"Zo dankbaar voor haar! Super lieve, rustige dame. Met haar massage brengt ze rust tot in je ziel. En dat terwijl je lekker los wordt gemasseerd!"</p>
+                <footer style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #AD6B4C">— Chloë De Rijcke, via Google</footer>
+              </blockquote>
+              <blockquote class="review-card">
+                <div style="color: #C6866A; margin-bottom: 16px; font-size: 18px; letter-spacing: 2px;">★★★★★</div>
+                <p style="font-family: 'Lora', Georgia, serif; font-style: italic; font-size: 19px; line-height: 1.6; color: #57503F; margin: 0 0 16px 0">"Ik heb vandaag de Zen Head Massage gehad en het was echt een geweldige ervaring. Heerlijk ontspannend en verrassend om te merken hoe alles in verbinding staat."</p>
+                <footer style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #AD6B4C">— Marie-Lien V., via Google</footer>
+              </blockquote>
+              <blockquote class="review-card">
+                <div style="color: #C6866A; margin-bottom: 16px; font-size: 18px; letter-spacing: 2px;">★★★★★</div>
+                <p style="font-family: 'Lora', Georgia, serif; font-style: italic; font-size: 19px; line-height: 1.6; color: #57503F; margin: 0 0 16px 0">"Kimberly is werkelijkwaar amazing. Ze voelt precies waar er een spier vastzit en behandelt deze erg goed."</p>
+                <footer style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #AD6B4C">— Hulst The Zeeuw, via Google</footer>
+              </blockquote>
+              <!-- Set 2 (Duplicate for infinite scroll) -->
+              <blockquote class="review-card">
+                <div style="color: #C6866A; margin-bottom: 16px; font-size: 18px; letter-spacing: 2px;">★★★★★</div>
+                <p style="font-family: 'Lora', Georgia, serif; font-style: italic; font-size: 19px; line-height: 1.6; color: #57503F; margin: 0 0 16px 0">"Wat een prachtige ervaring. De massage bracht me direct in een diepe ontspanning. De sfeer was warm en veilig, en er werd echt de tijd genomen om af te stemmen."</p>
+                <footer style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #AD6B4C">— Sarah Stappers, via Google</footer>
+              </blockquote>
+              <blockquote class="review-card">
+                <div style="color: #C6866A; margin-bottom: 16px; font-size: 18px; letter-spacing: 2px;">★★★★★</div>
+                <p style="font-family: 'Lora', Georgia, serif; font-style: italic; font-size: 19px; line-height: 1.6; color: #57503F; margin: 0 0 16px 0">"Zalige fullbody massage mogen ontvangen vandaag. Een echte top ervaring, maar vooral enorm ontspannend! Weinig massagetherapeuten die zo zalig en relaxerend masseren."</p>
+                <footer style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #AD6B4C">— Sparkles and Queens, via Google</footer>
+              </blockquote>
+              <blockquote class="review-card">
+                <div style="color: #C6866A; margin-bottom: 16px; font-size: 18px; letter-spacing: 2px;">★★★★★</div>
+                <p style="font-family: 'Lora', Georgia, serif; font-style: italic; font-size: 19px; line-height: 1.6; color: #57503F; margin: 0 0 16px 0">"Een heel fijne en deugddoende ervaring. Kimberly luistert echt en weet precies de juiste plekjes te vinden die extra aandacht of zorg nodig hebben. Zalig."</p>
+                <footer style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #AD6B4C">— Katleen Van Nauw, via Google</footer>
+              </blockquote>
+              <blockquote class="review-card">
+                <div style="color: #C6866A; margin-bottom: 16px; font-size: 18px; letter-spacing: 2px;">★★★★★</div>
+                <p style="font-family: 'Lora', Georgia, serif; font-style: italic; font-size: 19px; line-height: 1.6; color: #57503F; margin: 0 0 16px 0">"Zo dankbaar voor haar! Super lieve, rustige dame. Met haar massage brengt ze rust tot in je ziel. En dat terwijl je lekker los wordt gemasseerd!"</p>
+                <footer style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #AD6B4C">— Chloë De Rijcke, via Google</footer>
+              </blockquote>
+              <blockquote class="review-card">
+                <div style="color: #C6866A; margin-bottom: 16px; font-size: 18px; letter-spacing: 2px;">★★★★★</div>
+                <p style="font-family: 'Lora', Georgia, serif; font-style: italic; font-size: 19px; line-height: 1.6; color: #57503F; margin: 0 0 16px 0">"Ik heb vandaag de Zen Head Massage gehad en het was echt een geweldige ervaring. Heerlijk ontspannend en verrassend om te merken hoe alles in verbinding staat."</p>
+                <footer style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #AD6B4C">— Marie-Lien V., via Google</footer>
+              </blockquote>
+              <blockquote class="review-card">
+                <div style="color: #C6866A; margin-bottom: 16px; font-size: 18px; letter-spacing: 2px;">★★★★★</div>
+                <p style="font-family: 'Lora', Georgia, serif; font-style: italic; font-size: 19px; line-height: 1.6; color: #57503F; margin: 0 0 16px 0">"Kimberly is werkelijkwaar amazing. Ze voelt precies waar er een spier vastzit en behandelt deze erg goed."</p>
+                <footer style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #AD6B4C">— Hulst The Zeeuw, via Google</footer>
+              </blockquote>
+            </div>
           </div>
           <a href="https://www.google.com/search?q=Maha+Prana+Sint-Niklaas+reviews" target="_blank" rel="noopener" style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #C6866A; text-decoration: none; border-bottom: 1px solid #AD6B4C; padding-bottom: 3px" style-hover="color: #A96B4F">Lees alle reviews op Google</a>
         </div>
