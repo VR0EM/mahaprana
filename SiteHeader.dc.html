@@ -1,54 +1,92 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="./support.js"></script>
 </head>
+
 <body>
-<x-dc>
-<helmet>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-body { margin: 0; background: #F7F3EA; }
-</style>
-</helmet>
-<header style="position: sticky; top: 0; z-index: 50; background: rgba(247,243,234,0.96); border-bottom: 1px solid #E3DBC9">
-  <div style="max-width: 1180px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 76px">
-    <a href="index.html" style="font-family: 'Lora', Georgia, serif; font-size: 23px; font-weight: 500; letter-spacing: 0.2em; color: #33302A; text-decoration: none; white-space: nowrap">MAHA PRANA</a>
-    <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
-      <nav aria-label="Hoofdnavigatie" style="display: flex; align-items: center; gap: 26px">
-        <a data-nav="home" href="index.html" style="font-family: Karla, 'Helvetica Neue', Arial, sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #4A453C; text-decoration: none; padding: 6px 0; border-bottom: 2px solid transparent" style-hover="color: #C6866A">Home</a>
-        <a data-nav="massages" href="Massages.dc.html" style="font-family: Karla, 'Helvetica Neue', Arial, sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #4A453C; text-decoration: none; padding: 6px 0; border-bottom: 2px solid transparent" style-hover="color: #C6866A">Massages</a>
-        <a data-nav="gelaat" href="Gelaatsrituelen.dc.html" style="font-family: Karla, 'Helvetica Neue', Arial, sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #4A453C; text-decoration: none; padding: 6px 0; border-bottom: 2px solid transparent" style-hover="color: #C6866A">Gelaatsrituelen</a>
-        <a data-nav="energetisch" href="Energetisch werk.dc.html" style="font-family: Karla, 'Helvetica Neue', Arial, sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #4A453C; text-decoration: none; padding: 6px 0; border-bottom: 2px solid transparent" style-hover="color: #C6866A">Energetisch werk</a>
-        <a data-nav="over" href="Over mij.dc.html" style="font-family: Karla, 'Helvetica Neue', Arial, sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #4A453C; text-decoration: none; padding: 6px 0; border-bottom: 2px solid transparent" style-hover="color: #C6866A">Over mij</a>
-        <a data-nav="contact" href="Contact.dc.html" style="font-family: Karla, 'Helvetica Neue', Arial, sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #4A453C; text-decoration: none; padding: 6px 0; border-bottom: 2px solid transparent" style-hover="color: #C6866A">Contact &amp; Boeken</a>
-        <a href="https://www.studiobookr.com/nl/maha-prana-75675#/" target="_blank" rel="noopener" style="font-family: Karla, 'Helvetica Neue', Arial, sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #F7F3EA; background: #C6866A; padding: 11px 20px; border-radius: 8px; text-decoration: none" style-hover="background: #A96B4F">Boek nu</a>
-      </nav>
-    </sc-if>
-    <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
-      <button onClick="{{ toggle }}" aria-label="Menu openen of sluiten" style="display: flex; flex-direction: column; gap: 5px; background: none; border: none; padding: 10px; cursor: pointer">
-        <span style="display: block; width: 24px; height: 2px; background: #33302A"></span>
-        <span style="display: block; width: 24px; height: 2px; background: #33302A"></span>
-        <span style="display: block; width: 24px; height: 2px; background: #33302A"></span>
-      </button>
-    </sc-if>
-  </div>
-  <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
-    <nav aria-label="Mobiele navigatie" style="display: flex; flex-direction: column; gap: 4px; padding: 8px 24px 24px 24px; border-top: 1px solid #E3DBC9; background: #F7F3EA">
-      <a data-nav="home" href="index.html" style="font-family: Karla, 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #4A453C; text-decoration: none; padding: 12px 0; border-bottom: 1px solid #ECE5D4">Home</a>
-      <a data-nav="massages" href="Massages.dc.html" style="font-family: Karla, 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #4A453C; text-decoration: none; padding: 12px 0; border-bottom: 1px solid #ECE5D4">Massages</a>
-      <a data-nav="gelaat" href="Gelaatsrituelen.dc.html" style="font-family: Karla, 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #4A453C; text-decoration: none; padding: 12px 0; border-bottom: 1px solid #ECE5D4">Gelaatsrituelen</a>
-      <a data-nav="energetisch" href="Energetisch werk.dc.html" style="font-family: Karla, 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #4A453C; text-decoration: none; padding: 12px 0; border-bottom: 1px solid #ECE5D4">Energetisch werk</a>
-      <a data-nav="over" href="Over mij.dc.html" style="font-family: Karla, 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #4A453C; text-decoration: none; padding: 12px 0; border-bottom: 1px solid #ECE5D4">Over mij</a>
-      <a data-nav="contact" href="Contact.dc.html" style="font-family: Karla, 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #4A453C; text-decoration: none; padding: 12px 0; border-bottom: 1px solid #ECE5D4">Contact &amp; Boeken</a>
-      <a href="https://www.studiobookr.com/nl/maha-prana-75675#/" target="_blank" rel="noopener" style="font-family: Karla, 'Helvetica Neue', Arial, sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #F7F3EA; background: #C6866A; padding: 14px 20px; border-radius: 8px; text-decoration: none; text-align: center; margin-top: 16px">Boek nu</a>
-    </nav>
-  </sc-if>
-</header>
-</x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1200,&quot;height&quot;:90},&quot;active&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;home&quot;,&quot;massages&quot;,&quot;gelaat&quot;,&quot;energetisch&quot;,&quot;over&quot;,&quot;contact&quot;,&quot;cadeaubons&quot;,&quot;voorwaarden&quot;],&quot;default&quot;:&quot;home&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+  <x-dc>
+    <helmet>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Karla:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+      <style>
+        body {
+          margin: 0;
+          background: #F7F3EA;
+        }
+      </style>
+    </helmet>
+    <header
+      style="position: sticky; top: 0; z-index: 50; background: rgba(247,243,234,0.96); border-bottom: 1px solid #E3DBC9">
+      <div
+        style="max-width: 1180px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 76px">
+        <a href="index.html"
+          style="font-family: 'Lora', Georgia, serif; font-size: 23px; font-weight: 500; letter-spacing: 0.2em; color: #33302A; text-decoration: none; white-space: nowrap">MAHA
+          PRANA</a>
+        <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+          <nav aria-label="Hoofdnavigatie" style="display: flex; align-items: center; gap: 26px">
+            <a data-nav="home" href="index.html"
+              style="font-family: Karla, 'Helvetica Neue', Arial, sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #4A453C; text-decoration: none; padding: 6px 0; border-bottom: 2px solid transparent"
+              style-hover="color: #C6866A">Home</a>
+            <a data-nav="massages" href="Massages.dc.html"
+              style="font-family: Karla, 'Helvetica Neue', Arial, sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #4A453C; text-decoration: none; padding: 6px 0; border-bottom: 2px solid transparent"
+              style-hover="color: #C6866A">Massages</a>
+            <a data-nav="gelaat" href="Gelaatsrituelen.dc.html"
+              style="font-family: Karla, 'Helvetica Neue', Arial, sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #4A453C; text-decoration: none; padding: 6px 0; border-bottom: 2px solid transparent"
+              style-hover="color: #C6866A">Gelaatsrituelen</a>
+            <a data-nav="energetisch" href="Energetisch werk.dc.html"
+              style="font-family: Karla, 'Helvetica Neue', Arial, sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #4A453C; text-decoration: none; padding: 6px 0; border-bottom: 2px solid transparent"
+              style-hover="color: #C6866A">Energetisch werk</a>
+            <a data-nav="over" href="Over mij.dc.html"
+              style="font-family: Karla, 'Helvetica Neue', Arial, sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #4A453C; text-decoration: none; padding: 6px 0; border-bottom: 2px solid transparent"
+              style-hover="color: #C6866A">Over mij</a>
+            <a data-nav="contact" href="Contact.dc.html"
+              style="font-family: Karla, 'Helvetica Neue', Arial, sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #4A453C; text-decoration: none; padding: 6px 0; border-bottom: 2px solid transparent"
+              style-hover="color: #C6866A">Contact &amp; Boeken</a>
+            <a href="https://mahaprana.studiobookr.com" target="_blank" rel="noopener"
+              style="font-family: Karla, 'Helvetica Neue', Arial, sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #F7F3EA; background: #C6866A; padding: 11px 20px; border-radius: 2px; text-decoration: none"
+              style-hover="background: #A96B4F">Boek nu</a>
+          </nav>
+        </sc-if>
+        <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+          <button onClick="{{ toggle }}" aria-label="Menu openen of sluiten" style="position: relative; width: 44px; height: 44px; background: none; border: none; padding: 0; cursor: pointer; display: flex; align-items: center; justify-content: center">
+            <span style="display: block; width: 24px; height: 2px; background: #33302A; position: absolute; transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), top 0.3s cubic-bezier(0.4, 0, 0.2, 1); top: {{ bar1Top }}; transform: {{ bar1Transform }}"></span>
+            <span style="display: block; width: 24px; height: 2px; background: #33302A; position: absolute; transition: opacity 0.2s ease; opacity: {{ bar2Opacity }}"></span>
+            <span style="display: block; width: 24px; height: 2px; background: #33302A; position: absolute; transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1); bottom: {{ bar3Bottom }}; transform: {{ bar3Transform }}"></span>
+          </button>
+        </sc-if>
+      </div>
+      <div style="overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1); max-height: {{ menuMaxHeight }}; opacity: {{ menuOpacity }}; pointer-events: {{ menuPointer }}">
+        <nav aria-label="Mobiele navigatie"
+          style="display: flex; flex-direction: column; gap: 4px; padding: 8px 24px 24px 24px; border-top: 1px solid #E3DBC9; background: #F7F3EA">
+          <a data-nav="home" href="index.html"
+            style="font-family: Karla, 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #4A453C; text-decoration: none; padding: 12px 0; border-bottom: 1px solid #ECE5D4">Home</a>
+          <a data-nav="massages" href="Massages.dc.html"
+            style="font-family: Karla, 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #4A453C; text-decoration: none; padding: 12px 0; border-bottom: 1px solid #ECE5D4">Massages</a>
+          <a data-nav="gelaat" href="Gelaatsrituelen.dc.html"
+            style="font-family: Karla, 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #4A453C; text-decoration: none; padding: 12px 0; border-bottom: 1px solid #ECE5D4">Gelaatsrituelen</a>
+          <a data-nav="energetisch" href="Energetisch werk.dc.html"
+            style="font-family: Karla, 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #4A453C; text-decoration: none; padding: 12px 0; border-bottom: 1px solid #ECE5D4">Energetisch
+            werk</a>
+          <a data-nav="over" href="Over mij.dc.html"
+            style="font-family: Karla, 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #4A453C; text-decoration: none; padding: 12px 0; border-bottom: 1px solid #ECE5D4">Over
+            mij</a>
+          <a data-nav="contact" href="Contact.dc.html"
+            style="font-family: Karla, 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #4A453C; text-decoration: none; padding: 12px 0; border-bottom: 1px solid #ECE5D4">Contact
+            &amp; Boeken</a>
+          <a href="https://mahaprana.studiobookr.com" target="_blank" rel="noopener"
+            style="font-family: Karla, 'Helvetica Neue', Arial, sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #F7F3EA; background: #C6866A; padding: 14px 20px; border-radius: 2px; text-decoration: none; text-align: center; margin-top: 16px">Boek
+            nu</a>
+        </nav>
+      </div>
+    </header>
+  </x-dc>
+  <script type="text/x-dc" data-dc-script
+    data-props="{&quot;$preview&quot;:{&quot;width&quot;:1200,&quot;height&quot;:90},&quot;active&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;home&quot;,&quot;massages&quot;,&quot;gelaat&quot;,&quot;energetisch&quot;,&quot;over&quot;,&quot;contact&quot;,&quot;cadeaubons&quot;,&quot;voorwaarden&quot;],&quot;default&quot;:&quot;home&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
 class Component extends DCLogic {
   state = { open: false, mobile: false };
   componentDidMount() {
@@ -72,14 +110,24 @@ class Component extends DCLogic {
     });
   }
   renderVals() {
+    const mOpen = this.state.mobile && this.state.open;
     return {
       isDesktop: !this.state.mobile,
       isMobile: this.state.mobile,
-      menuOpen: this.state.mobile && this.state.open,
+      menuOpen: mOpen,
+      menuMaxHeight: mOpen ? '500px' : '0px',
+      menuOpacity: mOpen ? '1' : '0',
+      menuPointer: mOpen ? 'auto' : 'none',
+      bar1Top: mOpen ? '21px' : '14px',
+      bar1Transform: mOpen ? 'rotate(45deg)' : 'none',
+      bar2Opacity: mOpen ? '0' : '1',
+      bar3Bottom: mOpen ? '21px' : '14px',
+      bar3Transform: mOpen ? 'rotate(-45deg)' : 'none',
       toggle: () => this.setState((s) => ({ open: !s.open })),
     };
   }
 }
 </script>
 </body>
+
 </html>
