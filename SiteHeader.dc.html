@@ -53,14 +53,15 @@
           </nav>
         </sc-if>
         <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
-          <button onClick="{{ toggle }}" aria-label="Menu openen of sluiten" style="position: relative; width: 44px; height: 44px; background: none; border: none; padding: 0; cursor: pointer; display: flex; align-items: center; justify-content: center">
-            <span style="display: block; width: 24px; height: 2px; background: #33302A; position: absolute; transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), top 0.3s cubic-bezier(0.4, 0, 0.2, 1); top: {{ bar1Top }}; transform: {{ bar1Transform }}"></span>
-            <span style="display: block; width: 24px; height: 2px; background: #33302A; position: absolute; transition: opacity 0.2s ease; opacity: {{ bar2Opacity }}"></span>
-            <span style="display: block; width: 24px; height: 2px; background: #33302A; position: absolute; transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1); bottom: {{ bar3Bottom }}; transform: {{ bar3Transform }}"></span>
+          <button onClick="{{ toggle }}" aria-label="Menu openen of sluiten"
+            style="display: flex; flex-direction: column; gap: 5px; background: none; border: none; padding: 10px; cursor: pointer">
+            <span style="display: block; width: 24px; height: 2px; background: #33302A"></span>
+            <span style="display: block; width: 24px; height: 2px; background: #33302A"></span>
+            <span style="display: block; width: 24px; height: 2px; background: #33302A"></span>
           </button>
         </sc-if>
       </div>
-      <div style="overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1); max-height: {{ menuMaxHeight }}; opacity: {{ menuOpacity }}; pointer-events: {{ menuPointer }}">
+      <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
         <nav aria-label="Mobiele navigatie"
           style="display: flex; flex-direction: column; gap: 4px; padding: 8px 24px 24px 24px; border-top: 1px solid #E3DBC9; background: #F7F3EA">
           <a data-nav="home" href="index.html"
@@ -82,7 +83,7 @@
             style="font-family: Karla, 'Helvetica Neue', Arial, sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #F7F3EA; background: #C6866A; padding: 14px 20px; border-radius: 8px; text-decoration: none; text-align: center; margin-top: 16px">Boek
             nu</a>
         </nav>
-      </div>
+      </sc-if>
     </header>
   </x-dc>
   <script type="text/x-dc" data-dc-script
@@ -110,19 +111,10 @@ class Component extends DCLogic {
     });
   }
   renderVals() {
-    const mOpen = this.state.mobile && this.state.open;
     return {
       isDesktop: !this.state.mobile,
       isMobile: this.state.mobile,
-      menuOpen: mOpen,
-      menuMaxHeight: mOpen ? '500px' : '0px',
-      menuOpacity: mOpen ? '1' : '0',
-      menuPointer: mOpen ? 'auto' : 'none',
-      bar1Top: mOpen ? '21px' : '14px',
-      bar1Transform: mOpen ? 'rotate(45deg)' : 'none',
-      bar2Opacity: mOpen ? '0' : '1',
-      bar3Bottom: mOpen ? '21px' : '14px',
-      bar3Transform: mOpen ? 'rotate(-45deg)' : 'none',
+      menuOpen: this.state.mobile && this.state.open,
       toggle: () => this.setState((s) => ({ open: !s.open })),
     };
   }
