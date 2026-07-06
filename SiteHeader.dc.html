@@ -31,25 +31,25 @@
           <nav aria-label="Hoofdnavigatie" style="display: flex; align-items: center; gap: 26px">
             <a data-nav="home" href="index.html"
               style="font-family: Karla, 'Helvetica Neue', Arial, sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #4A453C; text-decoration: none; padding: 6px 0; border-bottom: 2px solid transparent"
-              style-hover="color: #9C5F41">Home</a>
+              style-hover="color: #B57859">Home</a>
             <a data-nav="massages" href="massages.html"
               style="font-family: Karla, 'Helvetica Neue', Arial, sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #4A453C; text-decoration: none; padding: 6px 0; border-bottom: 2px solid transparent"
-              style-hover="color: #9C5F41">Massages</a>
+              style-hover="color: #B57859">Massages</a>
             <a data-nav="gelaat" href="gelaatsrituelen.html"
               style="font-family: Karla, 'Helvetica Neue', Arial, sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #4A453C; text-decoration: none; padding: 6px 0; border-bottom: 2px solid transparent"
-              style-hover="color: #9C5F41">Gelaatsrituelen</a>
+              style-hover="color: #B57859">Gelaatsrituelen</a>
             <a data-nav="energetisch" href="energetisch-werk.html"
               style="font-family: Karla, 'Helvetica Neue', Arial, sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #4A453C; text-decoration: none; padding: 6px 0; border-bottom: 2px solid transparent"
-              style-hover="color: #9C5F41">Energetisch werk</a>
+              style-hover="color: #B57859">Energetisch werk</a>
             <a data-nav="over" href="over-mij.html"
               style="font-family: Karla, 'Helvetica Neue', Arial, sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #4A453C; text-decoration: none; padding: 6px 0; border-bottom: 2px solid transparent"
-              style-hover="color: #9C5F41">Over mij</a>
+              style-hover="color: #B57859">Over mij</a>
             <a data-nav="contact" href="contact.html"
               style="font-family: Karla, 'Helvetica Neue', Arial, sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #4A453C; text-decoration: none; padding: 6px 0; border-bottom: 2px solid transparent"
-              style-hover="color: #9C5F41">Contact &amp; Boeken</a>
+              style-hover="color: #B57859">Contact &amp; Boeken</a>
             <a href="https://www.studiobookr.com/nl/maha-prana-75675#/" target="_blank" rel="noopener"
-              style="font-family: Karla, 'Helvetica Neue', Arial, sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #F7F3EA; background: #9C5F41; padding: 11px 20px; border-radius: 8px; text-decoration: none"
-              style-hover="background: #8F5236">Boek nu</a>
+              style="font-family: Karla, 'Helvetica Neue', Arial, sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #F7F3EA; background: #B57859; padding: 11px 20px; border-radius: 8px; text-decoration: none"
+              style-hover="background: #A96B4F">Boek nu</a>
           </nav>
         </sc-if>
         <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
@@ -80,7 +80,7 @@
             style="font-family: Karla, 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #4A453C; text-decoration: none; padding: 12px 0; border-bottom: 1px solid #ECE5D4">Contact
             &amp; Boeken</a>
           <a href="https://www.studiobookr.com/nl/maha-prana-75675#/" target="_blank" rel="noopener"
-            style="font-family: Karla, 'Helvetica Neue', Arial, sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #F7F3EA; background: #9C5F41; padding: 14px 20px; border-radius: 8px; text-decoration: none; text-align: center; margin-top: 16px">Boek
+            style="font-family: Karla, 'Helvetica Neue', Arial, sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #F7F3EA; background: #B57859; padding: 14px 20px; border-radius: 8px; text-decoration: none; text-align: center; margin-top: 16px">Boek
             nu</a>
         </nav>
       </sc-if>
@@ -105,7 +105,7 @@ class Component extends DCLogic {
     const key = this.props.active;
     document.querySelectorAll('[data-nav]').forEach((a) => {
       const on = a.getAttribute('data-nav') === key;
-      a.style.borderBottomColor = on ? '#8F5236' : 'transparent';
+      a.style.borderBottomColor = on ? '#A96B4F' : 'transparent';
       if (on) a.setAttribute('aria-current', 'page');
       else a.removeAttribute('aria-current');
     });
