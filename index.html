@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <x-dc>
@@ -51,56 +52,56 @@ body { margin: 0; background: #F7F3EA; }
 @media (max-width: 600px) { .review-card { width: 300px; } }
 </style>
 </helmet>
-<div style="background: #F7F3EA; color: #33302A; font-family: Karla, 'Helvetica Neue', Arial, sans-serif">
+<div >
   <dc-import name="SiteHeader" active="home" hint-size="100%,76px"></dc-import>
   <main>
     <section data-screen-label="Hero" style="max-width: 1180px; margin: 0 auto; padding: clamp(48px, 8vw, 96px) 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: clamp(32px, 5vw, 72px); align-items: center; animation: fadeUp 0.8s ease both">
       <div>
-        <p style="font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #A96B4F; margin: 0 0 20px 0">Praktijk voor holistisch welzijn — Sint-Niklaas</p>
+        <p class="subtitle">Praktijk voor holistisch welzijn — Sint-Niklaas</p>
         <h1 style="font-family: 'Lora', Georgia, serif; font-weight: 500; font-size: clamp(38px, 5.5vw, 60px); line-height: 1.12; margin: 0 0 24px 0; text-wrap: pretty">Een herbronning voor jouw levenskracht</h1>
-        <p style="font-size: 17px; line-height: 1.75; color: #57503F; margin: 0 0 32px 0; max-width: 52ch">Voel je de roep om even helemaal niets te moeten? Bij Maha Prana leg je jouw pantser af. Hier komt je zenuwstelsel tot rust en mag je eigen levensenergie — je <em>prana</em> — weer vrijuit stromen.</p>
+        <p class="body-text large" style="max-width: 52ch">Voel je de roep om even helemaal niets te moeten? Bij Maha Prana leg je jouw pantser af. Hier komt je zenuwstelsel tot rust en mag je eigen levensenergie — je <em>prana</em> — weer vrijuit stromen.</p>
         <div style="display: flex; flex-wrap: wrap; gap: 16px">
           <a href="https://www.studiobookr.com/nl/maha-prana-75675#/" target="_blank" rel="noopener" style="font-size: 14px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #F7F3EA; background: #B57859; padding: 15px 30px; border-radius: 8px; text-decoration: none" style-hover="background: #A96B4F">Boek jouw reset</a>
           <a href="#behandelingen" style="font-size: 14px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #B57859; border: 1px solid #B57859; padding: 14px 30px; border-radius: 8px; text-decoration: none" style-hover="background: #F3E3DA">Ontdek de behandelingen</a>
         </div>
       </div>
-      <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1000&q=70&auto=format&fit=crop" alt="Rustige spa-setting met massagestenen en zachte handdoeken" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 12px; display: block">
+      <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1000&q=70&auto=format&fit=crop" alt="Rustige spa-setting met massagestenen en zachte handdoeken" class="img-responsive" style="aspect-ratio: 4 / 5">
     </section>
 
-    <section data-screen-label="Holistische reis" style="background: #ECE9DF">
+    <section data-screen-label="Holistische reis" class="section-alt">
       <div style="max-width: 820px; margin: 0 auto; padding: clamp(56px, 8vw, 96px) 24px; text-align: center; animation-name: fadeUp; animation-duration: 0.7s; animation-timing-function: ease; animation-fill-mode: both; animation-timeline: view(); animation-range: entry 0% entry 40%">
         <h2 style="font-family: 'Lora', Georgia, serif; font-weight: 500; font-size: clamp(28px, 3.5vw, 40px); margin: 0 0 20px 0">Een holistische reis naar binnen</h2>
-        <p style="font-size: 16px; line-height: 1.8; color: #57503F; margin: 0">Bij Maha Prana kijk ik verder dan de buitenkant. We eren de verbinding tussen lichaam, geest en ziel. Elke aanraking en elk ritueel is doordrenkt met intentie, gericht op het herstellen van jouw natuurlijke balans. De sleutel tot ware heling ligt in de rust van het zenuwstelsel: pas wanneer we de vecht-of-vluchtstand verlaten, krijgt het lichaam de kans om zichzelf te herstellen.</p>
+        <p class="body-text no-margin">Bij Maha Prana kijk ik verder dan de buitenkant. We eren de verbinding tussen lichaam, geest en ziel. Elke aanraking en elk ritueel is doordrenkt met intentie, gericht op het herstellen van jouw natuurlijke balans. De sleutel tot ware heling ligt in de rust van het zenuwstelsel: pas wanneer we de vecht-of-vluchtstand verlaten, krijgt het lichaam de kans om zichzelf te herstellen.</p>
       </div>
     </section>
 
-    <section id="behandelingen" data-screen-label="Diensten" style="max-width: 1180px; margin: 0 auto; padding: clamp(56px, 8vw, 96px) 24px">
-      <div style="animation-name: fadeUp; animation-duration: 0.7s; animation-timing-function: ease; animation-fill-mode: both; animation-timeline: view(); animation-range: entry 0% entry 40%">
-        <p style="font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #A96B4F; margin: 0 0 12px 0">Rituelen &amp; behandelingen</p>
+    <section id="behandelingen" data-screen-label="Diensten" class="container" style="padding: clamp(56px, 8vw, 96px) 24px">
+      <div class="animate-fade-up">
+        <p class="subtitle" style="margin-bottom: 12px">Rituelen &amp; behandelingen</p>
         <h2 style="font-family: 'Lora', Georgia, serif; font-weight: 500; font-size: clamp(28px, 3.5vw, 40px); margin: 0 0 40px 0">Kies wat jouw lichaam vandaag nodig heeft</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px">
-          <article style="display: flex; flex-direction: column; background: #FFFDF7; border: 1px solid #E8E0CE; border-radius: 12px; overflow: hidden">
-            <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=800&q=70&auto=format&fit=crop" alt="Vrouw ontvangt een ontspannende rugmassage" loading="lazy" style="width: 100%; aspect-ratio: 3 / 2; object-fit: cover; display: block">
-            <div style="padding: 28px; display: flex; flex-direction: column; gap: 12px; flex: 1">
-              <h3 style="font-family: 'Lora', Georgia, serif; font-weight: 600; font-size: 26px; margin: 0">Massages</h3>
-              <p style="font-size: 15px; line-height: 1.7; color: #57503F; margin: 0; flex: 1">Intuïtieve holistische massage, gliding cupping en de Zenhead-massage. Een dans tussen zachtheid en diepte, afgestemd op wat jouw lichaam vertelt.</p>
-              <a href="massages.html" style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #B57859; text-decoration: none; border-bottom: 1px solid #A96B4F; align-self: flex-start; padding-bottom: 3px" style-hover="color: #A96B4F">Bekijk de massages</a>
+        <div class="grid grid-cols-auto">
+          <article class="card-image">
+            <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=800&q=70&auto=format&fit=crop" alt="Vrouw ontvangt een ontspannende rugmassage" loading="lazy" class="img-responsive" style="aspect-ratio: 3 / 2; border-radius: 0">
+            <div class="card-content">
+              <h3 class="h3">Massages</h3>
+              <p class="body-text no-margin" style="font-size: 15px; flex: 1">Intuïtieve holistische massage, gliding cupping en de Zenhead-massage. Een dans tussen zachtheid en diepte, afgestemd op wat jouw lichaam vertelt.</p>
+              <a href="massages.html" class="link-text">Bekijk de massages</a>
             </div>
           </article>
-          <article style="display: flex; flex-direction: column; background: #FFFDF7; border: 1px solid #E8E0CE; border-radius: 12px; overflow: hidden">
-            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=70&auto=format&fit=crop" alt="Vrouw met gesloten ogen tijdens een verzorgende gelaatsbehandeling" loading="lazy" style="width: 100%; aspect-ratio: 3 / 2; object-fit: cover; display: block">
-            <div style="padding: 28px; display: flex; flex-direction: column; gap: 12px; flex: 1">
-              <h3 style="font-family: 'Lora', Georgia, serif; font-weight: 600; font-size: 26px; margin: 0">Gelaatsrituelen</h3>
-              <p style="font-size: 15px; line-height: 1.7; color: #57503F; margin: 0; flex: 1">Meer dan huidverzorging alleen: een eerbetoon aan jouw innerlijke glow, waarbij spanning uit gezicht en geest wegvloeit.</p>
-              <a href="gelaatsrituelen.html" style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #B57859; text-decoration: none; border-bottom: 1px solid #A96B4F; align-self: flex-start; padding-bottom: 3px" style-hover="color: #A96B4F">Bekijk de rituelen</a>
+          <article class="card-image">
+            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=70&auto=format&fit=crop" alt="Vrouw met gesloten ogen tijdens een verzorgende gelaatsbehandeling" loading="lazy" class="img-responsive" style="aspect-ratio: 3 / 2; border-radius: 0">
+            <div class="card-content">
+              <h3 class="h3">Gelaatsrituelen</h3>
+              <p class="body-text no-margin" style="font-size: 15px; flex: 1">Meer dan huidverzorging alleen: een eerbetoon aan jouw innerlijke glow, waarbij spanning uit gezicht en geest wegvloeit.</p>
+              <a href="gelaatsrituelen.html" class="link-text">Bekijk de rituelen</a>
             </div>
           </article>
-          <article style="display: flex; flex-direction: column; background: #FFFDF7; border: 1px solid #E8E0CE; border-radius: 12px; overflow: hidden">
-            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=70&auto=format&fit=crop" alt="Vrouw mediteert in de vroege ochtendzon" loading="lazy" style="width: 100%; aspect-ratio: 3 / 2; object-fit: cover; display: block">
-            <div style="padding: 28px; display: flex; flex-direction: column; gap: 12px; flex: 1">
-              <h3 style="font-family: 'Lora', Georgia, serif; font-weight: 600; font-size: 26px; margin: 0">Energetisch werk</h3>
-              <p style="font-size: 15px; line-height: 1.7; color: #57503F; margin: 0; flex: 1">Reiki, kristaltherapie en aura- en chakrahealing. Breng je energetisch lichaam in harmonie en herstel je innerlijke rustpunt.</p>
-              <a href="energetisch-werk.html" style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #B57859; text-decoration: none; border-bottom: 1px solid #A96B4F; align-self: flex-start; padding-bottom: 3px" style-hover="color: #A96B4F">Bekijk het aanbod</a>
+          <article class="card-image">
+            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=70&auto=format&fit=crop" alt="Vrouw mediteert in de vroege ochtendzon" loading="lazy" class="img-responsive" style="aspect-ratio: 3 / 2; border-radius: 0">
+            <div class="card-content">
+              <h3 class="h3">Energetisch werk</h3>
+              <p class="body-text no-margin" style="font-size: 15px; flex: 1">Reiki, kristaltherapie en aura- en chakrahealing. Breng je energetisch lichaam in harmonie en herstel je innerlijke rustpunt.</p>
+              <a href="energetisch-werk.html" class="link-text">Bekijk het aanbod</a>
             </div>
           </article>
         </div>
@@ -108,7 +109,7 @@ body { margin: 0; background: #F7F3EA; }
     </section>
 
     <section data-screen-label="Quote" style="background: #B57859">
-      <blockquote style="max-width: 820px; margin: 0 auto; padding: clamp(56px, 8vw, 88px) 24px; text-align: center">
+      <blockquote class="container-small">
         <p style="font-family: 'Lora', Georgia, serif; font-style: italic; font-weight: 500; font-size: clamp(24px, 3vw, 34px); line-height: 1.5; color: #F0EADB; margin: 0">"Maha Prana is de herinnering dat jij mag rusten. Dat jij mag ontvangen. Dat jij verbonden bent met de oneindige stroom van het leven."</p>
         <p style="font-size: 15px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #F7F3EA; margin: 24px 0 0 0">— Kimberley</p>
       </blockquote>
@@ -120,7 +121,7 @@ body { margin: 0; background: #F7F3EA; }
           <p style="font-family: monospace; font-size: 13px; color: #8A8271; background: #F7F3EA; padding: 8px 14px; border: 1px dashed #B5AB94; margin: 0">foto van Kimberley</p>
         </div>
         <div>
-          <p style="font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #A96B4F; margin: 0 0 12px 0">Even voorstellen</p>
+          <p class="subtitle" style="margin-bottom: 12px">Even voorstellen</p>
           <h2 style="font-family: 'Lora', Georgia, serif; font-weight: 500; font-size: clamp(28px, 3.5vw, 40px); margin: 0 0 20px 0">Ik ben Kimberley</h2>
           <p style="font-size: 16px; line-height: 1.8; color: #57503F; margin: 0 0 24px 0; max-width: 54ch">Lieve vrouw, welkom. Mijn eigen pad leerde me dat de grootste kracht niet ligt in harder werken, maar in de moed om te vertragen. Met Maha Prana creëerde ik een veilige plek waar je niets moet en alles mag — een plek om thuis te komen in je lichaam.</p>
           <a href="over-mij.html" style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #B57859; text-decoration: none; border-bottom: 1px solid #A96B4F; padding-bottom: 3px" style-hover="color: #A96B4F">Lees mijn verhaal</a>
@@ -129,73 +130,73 @@ body { margin: 0; background: #F7F3EA; }
     </section>
 
     <sc-if value="{{ showReviews }}" hint-placeholder-val="{{ true }}">
-      <section data-screen-label="Reviews" style="max-width: 1180px; margin: 0 auto; padding: clamp(56px, 8vw, 96px) 24px">
-        <div style="animation-name: fadeUp; animation-duration: 0.7s; animation-timing-function: ease; animation-fill-mode: both; animation-timeline: view(); animation-range: entry 0% entry 40%">
-          <p style="font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #A96B4F; margin: 0 0 12px 0">Ervaringen</p>
+      <section data-screen-label="Reviews" class="container" style="padding: clamp(56px, 8vw, 96px) 24px">
+        <div class="animate-fade-up">
+          <p class="subtitle" style="margin-bottom: 12px">Ervaringen</p>
           <h2 style="font-family: 'Lora', Georgia, serif; font-weight: 500; font-size: clamp(28px, 3.5vw, 40px); margin: 0 0 36px 0">Wat bezoekers vertellen</h2>
           <div style="overflow: hidden; margin-bottom: 36px; padding-bottom: 8px;">
             <div class="marquee-track">
               <!-- Set 1 -->
               <blockquote class="review-card">
                 <div style="color: #B57859; margin-bottom: 16px; font-size: 18px; letter-spacing: 2px;">★★★★★</div>
-                <p style="font-family: 'Lora', Georgia, serif; font-style: italic; font-size: 19px; line-height: 1.6; color: #57503F; margin: 0 0 16px 0">"Wat een prachtige ervaring. De massage bracht me direct in een diepe ontspanning. De sfeer was warm en veilig, en er werd echt de tijd genomen om af te stemmen."</p>
-                <footer style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #A96B4F">— Sarah Stappers, via Google</footer>
+                <p class="quote-text">"Wat een prachtige ervaring. De massage bracht me direct in een diepe ontspanning. De sfeer was warm en veilig, en er werd echt de tijd genomen om af te stemmen."</p>
+                <footer class="label-accent">— Sarah Stappers, via Google</footer>
               </blockquote>
               <blockquote class="review-card">
                 <div style="color: #B57859; margin-bottom: 16px; font-size: 18px; letter-spacing: 2px;">★★★★★</div>
-                <p style="font-family: 'Lora', Georgia, serif; font-style: italic; font-size: 19px; line-height: 1.6; color: #57503F; margin: 0 0 16px 0">"Zalige fullbody massage mogen ontvangen vandaag. Een echte top ervaring, maar vooral enorm ontspannend! Weinig massagetherapeuten die zo zalig en relaxerend masseren."</p>
-                <footer style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #A96B4F">— Sparkles and Queens, via Google</footer>
+                <p class="quote-text">"Zalige fullbody massage mogen ontvangen vandaag. Een echte top ervaring, maar vooral enorm ontspannend! Weinig massagetherapeuten die zo zalig en relaxerend masseren."</p>
+                <footer class="label-accent">— Sparkles and Queens, via Google</footer>
               </blockquote>
               <blockquote class="review-card">
                 <div style="color: #B57859; margin-bottom: 16px; font-size: 18px; letter-spacing: 2px;">★★★★★</div>
-                <p style="font-family: 'Lora', Georgia, serif; font-style: italic; font-size: 19px; line-height: 1.6; color: #57503F; margin: 0 0 16px 0">"Een heel fijne en deugddoende ervaring. Kimberly luistert echt en weet precies de juiste plekjes te vinden die extra aandacht of zorg nodig hebben. Zalig."</p>
-                <footer style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #A96B4F">— Katleen Van Nauw, via Google</footer>
+                <p class="quote-text">"Een heel fijne en deugddoende ervaring. Kimberly luistert echt en weet precies de juiste plekjes te vinden die extra aandacht of zorg nodig hebben. Zalig."</p>
+                <footer class="label-accent">— Katleen Van Nauw, via Google</footer>
               </blockquote>
               <blockquote class="review-card">
                 <div style="color: #B57859; margin-bottom: 16px; font-size: 18px; letter-spacing: 2px;">★★★★★</div>
-                <p style="font-family: 'Lora', Georgia, serif; font-style: italic; font-size: 19px; line-height: 1.6; color: #57503F; margin: 0 0 16px 0">"Zo dankbaar voor haar! Super lieve, rustige dame. Met haar massage brengt ze rust tot in je ziel. En dat terwijl je lekker los wordt gemasseerd!"</p>
-                <footer style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #A96B4F">— Chloë De Rijcke, via Google</footer>
+                <p class="quote-text">"Zo dankbaar voor haar! Super lieve, rustige dame. Met haar massage brengt ze rust tot in je ziel. En dat terwijl je lekker los wordt gemasseerd!"</p>
+                <footer class="label-accent">— Chloë De Rijcke, via Google</footer>
               </blockquote>
               <blockquote class="review-card">
                 <div style="color: #B57859; margin-bottom: 16px; font-size: 18px; letter-spacing: 2px;">★★★★★</div>
-                <p style="font-family: 'Lora', Georgia, serif; font-style: italic; font-size: 19px; line-height: 1.6; color: #57503F; margin: 0 0 16px 0">"Ik heb vandaag de Zen Head Massage gehad en het was echt een geweldige ervaring. Heerlijk ontspannend en verrassend om te merken hoe alles in verbinding staat."</p>
-                <footer style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #A96B4F">— Marie-Lien V., via Google</footer>
+                <p class="quote-text">"Ik heb vandaag de Zen Head Massage gehad en het was echt een geweldige ervaring. Heerlijk ontspannend en verrassend om te merken hoe alles in verbinding staat."</p>
+                <footer class="label-accent">— Marie-Lien V., via Google</footer>
               </blockquote>
               <blockquote class="review-card">
                 <div style="color: #B57859; margin-bottom: 16px; font-size: 18px; letter-spacing: 2px;">★★★★★</div>
-                <p style="font-family: 'Lora', Georgia, serif; font-style: italic; font-size: 19px; line-height: 1.6; color: #57503F; margin: 0 0 16px 0">"Kimberly is werkelijkwaar amazing. Ze voelt precies waar er een spier vastzit en behandelt deze erg goed."</p>
-                <footer style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #A96B4F">— Hulst The Zeeuw, via Google</footer>
+                <p class="quote-text">"Kimberly is werkelijkwaar amazing. Ze voelt precies waar er een spier vastzit en behandelt deze erg goed."</p>
+                <footer class="label-accent">— Hulst The Zeeuw, via Google</footer>
               </blockquote>
               <!-- Set 2 (Duplicate for infinite scroll) -->
               <blockquote class="review-card">
                 <div style="color: #B57859; margin-bottom: 16px; font-size: 18px; letter-spacing: 2px;">★★★★★</div>
-                <p style="font-family: 'Lora', Georgia, serif; font-style: italic; font-size: 19px; line-height: 1.6; color: #57503F; margin: 0 0 16px 0">"Wat een prachtige ervaring. De massage bracht me direct in een diepe ontspanning. De sfeer was warm en veilig, en er werd echt de tijd genomen om af te stemmen."</p>
-                <footer style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #A96B4F">— Sarah Stappers, via Google</footer>
+                <p class="quote-text">"Wat een prachtige ervaring. De massage bracht me direct in een diepe ontspanning. De sfeer was warm en veilig, en er werd echt de tijd genomen om af te stemmen."</p>
+                <footer class="label-accent">— Sarah Stappers, via Google</footer>
               </blockquote>
               <blockquote class="review-card">
                 <div style="color: #B57859; margin-bottom: 16px; font-size: 18px; letter-spacing: 2px;">★★★★★</div>
-                <p style="font-family: 'Lora', Georgia, serif; font-style: italic; font-size: 19px; line-height: 1.6; color: #57503F; margin: 0 0 16px 0">"Zalige fullbody massage mogen ontvangen vandaag. Een echte top ervaring, maar vooral enorm ontspannend! Weinig massagetherapeuten die zo zalig en relaxerend masseren."</p>
-                <footer style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #A96B4F">— Sparkles and Queens, via Google</footer>
+                <p class="quote-text">"Zalige fullbody massage mogen ontvangen vandaag. Een echte top ervaring, maar vooral enorm ontspannend! Weinig massagetherapeuten die zo zalig en relaxerend masseren."</p>
+                <footer class="label-accent">— Sparkles and Queens, via Google</footer>
               </blockquote>
               <blockquote class="review-card">
                 <div style="color: #B57859; margin-bottom: 16px; font-size: 18px; letter-spacing: 2px;">★★★★★</div>
-                <p style="font-family: 'Lora', Georgia, serif; font-style: italic; font-size: 19px; line-height: 1.6; color: #57503F; margin: 0 0 16px 0">"Een heel fijne en deugddoende ervaring. Kimberly luistert echt en weet precies de juiste plekjes te vinden die extra aandacht of zorg nodig hebben. Zalig."</p>
-                <footer style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #A96B4F">— Katleen Van Nauw, via Google</footer>
+                <p class="quote-text">"Een heel fijne en deugddoende ervaring. Kimberly luistert echt en weet precies de juiste plekjes te vinden die extra aandacht of zorg nodig hebben. Zalig."</p>
+                <footer class="label-accent">— Katleen Van Nauw, via Google</footer>
               </blockquote>
               <blockquote class="review-card">
                 <div style="color: #B57859; margin-bottom: 16px; font-size: 18px; letter-spacing: 2px;">★★★★★</div>
-                <p style="font-family: 'Lora', Georgia, serif; font-style: italic; font-size: 19px; line-height: 1.6; color: #57503F; margin: 0 0 16px 0">"Zo dankbaar voor haar! Super lieve, rustige dame. Met haar massage brengt ze rust tot in je ziel. En dat terwijl je lekker los wordt gemasseerd!"</p>
-                <footer style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #A96B4F">— Chloë De Rijcke, via Google</footer>
+                <p class="quote-text">"Zo dankbaar voor haar! Super lieve, rustige dame. Met haar massage brengt ze rust tot in je ziel. En dat terwijl je lekker los wordt gemasseerd!"</p>
+                <footer class="label-accent">— Chloë De Rijcke, via Google</footer>
               </blockquote>
               <blockquote class="review-card">
                 <div style="color: #B57859; margin-bottom: 16px; font-size: 18px; letter-spacing: 2px;">★★★★★</div>
-                <p style="font-family: 'Lora', Georgia, serif; font-style: italic; font-size: 19px; line-height: 1.6; color: #57503F; margin: 0 0 16px 0">"Ik heb vandaag de Zen Head Massage gehad en het was echt een geweldige ervaring. Heerlijk ontspannend en verrassend om te merken hoe alles in verbinding staat."</p>
-                <footer style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #A96B4F">— Marie-Lien V., via Google</footer>
+                <p class="quote-text">"Ik heb vandaag de Zen Head Massage gehad en het was echt een geweldige ervaring. Heerlijk ontspannend en verrassend om te merken hoe alles in verbinding staat."</p>
+                <footer class="label-accent">— Marie-Lien V., via Google</footer>
               </blockquote>
               <blockquote class="review-card">
                 <div style="color: #B57859; margin-bottom: 16px; font-size: 18px; letter-spacing: 2px;">★★★★★</div>
-                <p style="font-family: 'Lora', Georgia, serif; font-style: italic; font-size: 19px; line-height: 1.6; color: #57503F; margin: 0 0 16px 0">"Kimberly is werkelijkwaar amazing. Ze voelt precies waar er een spier vastzit en behandelt deze erg goed."</p>
-                <footer style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #A96B4F">— Hulst The Zeeuw, via Google</footer>
+                <p class="quote-text">"Kimberly is werkelijkwaar amazing. Ze voelt precies waar er een spier vastzit en behandelt deze erg goed."</p>
+                <footer class="label-accent">— Hulst The Zeeuw, via Google</footer>
               </blockquote>
             </div>
           </div>
@@ -204,11 +205,11 @@ body { margin: 0; background: #F7F3EA; }
       </section>
     </sc-if>
 
-    <section data-screen-label="CTA" style="background: #ECE9DF">
+    <section data-screen-label="CTA" class="section-alt">
       <div style="max-width: 820px; margin: 0 auto; padding: clamp(56px, 8vw, 96px) 24px; text-align: center; animation-name: fadeUp; animation-duration: 0.7s; animation-timing-function: ease; animation-fill-mode: both; animation-timeline: view(); animation-range: entry 0% entry 40%">
         <h2 style="font-family: 'Lora', Georgia, serif; font-weight: 500; font-size: clamp(28px, 3.5vw, 40px); margin: 0 0 16px 0">Klaar voor jouw reset?</h2>
-        <p style="font-size: 16px; line-height: 1.8; color: #57503F; margin: 0 0 32px 0">Open op maandag en donderdag van 12:00 tot 20:00 — Sint-Jansplein 9, Sint-Niklaas.</p>
-        <a href="https://www.studiobookr.com/nl/maha-prana-75675#/" target="_blank" rel="noopener" style="display: inline-block; font-size: 14px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #F7F3EA; background: #B57859; padding: 16px 36px; border-radius: 8px; text-decoration: none" style-hover="background: #A96B4F">Boek nu online</a>
+        <p class="body-text">Open op maandag en donderdag van 12:00 tot 20:00 — Sint-Jansplein 9, Sint-Niklaas.</p>
+        <a href="https://www.studiobookr.com/nl/maha-prana-75675#/" target="_blank" rel="noopener" class="btn-primary">Boek nu online</a>
       </div>
     </section>
   </main>
