@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vr0em.github.io/mahaprana/sitemap.xml
